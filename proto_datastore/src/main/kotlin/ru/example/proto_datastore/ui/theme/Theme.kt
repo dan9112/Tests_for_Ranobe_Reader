@@ -1,4 +1,4 @@
-package ru.example.preference_datastore.ui.theme
+package ru.example.proto_datastore.ui.theme
 
 import android.app.Activity
 import android.os.Build.VERSION.SDK_INT

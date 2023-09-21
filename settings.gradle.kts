@@ -16,5 +16,5 @@ dependencyResolutionManagement {
 }
 
 rootProject.name = "Ranobe Reader"
-include(":preference_datastore")
+include(":proto_datastore")
  

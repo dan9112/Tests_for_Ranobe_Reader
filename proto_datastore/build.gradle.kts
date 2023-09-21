@@ -1,14 +1,15 @@
 plugins {
     alias(libs.plugins.com.android.application)
     alias(libs.plugins.org.jetbrains.kotlin.android)
+    alias(libs.plugins.org.jetbrains.kotlin.serialization)
 }
 
 android {
-    namespace = "ru.example.preference_datastore"
+    namespace = "ru.example.proto_datastore"
     compileSdk = AndroidConfig.COMPILE_SDK
 
     defaultConfig {
-        applicationId = "ru.example.preference_datastore"
+        applicationId = "ru.example.proto_datastore"
         minSdk = AndroidConfig.MIN_SDK
         targetSdk = AndroidConfig.TARGET_SDK
         versionCode = 1
@@ -61,4 +62,7 @@ dependencies {
     androidTestImplementation(libs.ui.test.junit4)
     debugImplementation(libs.ui.tooling)
     debugImplementation(libs.ui.test.manifest)
+
+    implementation(libs.datastore)
+    implementation(libs.kotlinx.serialization.json)
 }
