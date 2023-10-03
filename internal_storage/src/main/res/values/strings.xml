@@ -1,3 +1,18 @@
 <resources>
-    <string name="app_name">Internal Storage</string>
+    <string name="app_name" translatable="false">Internal Storage</string>
+    <string name="brodsky">
+        "
+        …
+        Don’t leave the room. Let only the room imagine a little
+        what you might look like. And besides, incognito
+        ergo sum, as form itself learned from substance once.
+        Don’t leave the room! Outside, you will not find France.
+
+        Don’t be a fool! Be what others weren’t. Remain.
+        Don’t leave the room! Let the furniture have free reign,
+        blend in with wallpaper. Bolt the door, barricade in place
+        with a dresser from chronos, cosmos, eros, virus, race.
+        "
+    </string>
+    <string name="read_exception">No file!</string>
 </resources>
