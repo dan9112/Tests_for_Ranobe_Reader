@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="ask_post_notifications_permission">Запросить разрешение на отправку уведомлений</string>
+    <string name="grant_permission">Предоставить разрешения</string>
+    <string name="ok">Ок</string>
+    <string name="permission_required">Требуется разрешение</string>
+    <string name="post_notification_declined_description">Кажется, вы навсегда отклонили разрешение на отправку уведомлений. Вы можете перейти в настройки приложения, чтобы предоставить его</string>
+    <string name="post_notification_default_description">Этому приложению необходим доступ к уведомлениям, чтобы вы могли видеть сообщения от работников. Если вы в этом заинтересованы, вам следует предоставить разрешение на тправку уведомлений</string>
+</resources>

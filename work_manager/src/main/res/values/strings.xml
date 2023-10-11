@@ -1,3 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name" translatable="false">Internal Storage</string>
+    <string name="app_name" translatable="false">Work Manager</string>
+    <string name="worker_notifications">Worker notifications</string>
+    <string name="worker">Worker</string>
+    <string name="notification_channel_for_worker_messages">Notification channel for worker messages</string>
+    <string name="worker_message">Worker message</string>
+    <string name="notification_has_updated_times">Notification has updated %1$d times</string>
+    <string name="launch_worker">Launch worker</string>
+    <string name="cancel_worker">Cancel worker</string>
 </resources>

@@ -1,2 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources />
+<resources>
+
+    <string name="worker_notifications">Уведомления работника</string>
+    <string name="worker">Работник</string>
+    <string name="notification_channel_for_worker_messages">Канал уведомлений для сообщений работника</string>
+    <string name="worker_message">Сообщение работника</string>
+    <string name="notification_has_updated_times">Уведомление обновлено %1$d раз</string>
+    <string name="launch_worker">Запустить работника</string>
+    <string name="cancel_worker">Отменить работника</string>
+</resources>
