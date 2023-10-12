@@ -31,16 +31,6 @@ class MyWorker(context: Context, params: WorkerParameters) : BaseWorker(context,
 
         val times = inputData.getLong(TIMES_KEY, ZERO)
 
-        val workManager = WorkManager.getInstance(applicationContext)
-        workManager.enqueueUniqueWork(
-            WORK_NAME,
-            ExistingWorkPolicy.APPEND,
-            OneTimeWorkRequestBuilder<MyWorker>()
-                .setInitialDelay(getDelayInSeconds(hour, minute), TimeUnit.SECONDS)
-                .addTag(TAG)
-                .build()
-        )
-
         if (SDK_INT >= O) createChannel()
         val notification = getBuilder(context = applicationContext, times = times)
             .build()
@@ -49,13 +39,24 @@ class MyWorker(context: Context, params: WorkerParameters) : BaseWorker(context,
             "Info",
             applicationContext.getString(R.string.notification_has_updated_times, times)
         )
-        return Result.success(
-            Data.Builder()
-                .putInt(HOUR_KEY, hour)
-                .putInt(MINUTE_KEY, minute)
-                .putLong(TIMES_KEY, times.inc())
+
+        val workManager = WorkManager.getInstance(applicationContext)
+        workManager.enqueueUniqueWork(
+            WORK_NAME,
+            ExistingWorkPolicy.REPLACE,
+            OneTimeWorkRequestBuilder<MyWorker>()
+                .setInitialDelay(getDelayInSeconds(hour, minute), TimeUnit.SECONDS)
+                .setInputData(
+                    Data.Builder()
+                        .putInt(HOUR_KEY, hour)
+                        .putInt(MINUTE_KEY, minute)
+                        .putLong(TIMES_KEY, times.inc())
+                        .build()
+                )
+                .addTag(TAG)
                 .build()
         )
+        return Result.success()
     }
 
     private val @receiver:StringRes Int.string
